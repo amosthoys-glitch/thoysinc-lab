@@ -14,7 +14,6 @@ export const SITE_URL = 'https://blog.thoysinc.com';
 
 export const SOCIAL = {
 	github: 'https://github.com/amosthoys-glitch',
-	linkedin: 'https://www.linkedin.com/', // TODO: 본인 프로필
 	email: 'mailto:amosthoys@gmail.com',
 };
 
