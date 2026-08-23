@@ -1,4 +1,4 @@
-# thoyslab
+# thoysinc
 
 Windows 인프라 실무 기록 블로그. [Astro](https://astro.build) 정적 사이트.
 

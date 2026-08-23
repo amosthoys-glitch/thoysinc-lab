@@ -1,6 +1,6 @@
 // Global site data. Imported anywhere via `import { ... } from '../consts'`.
 
-export const SITE_TITLE = 'thoyslab';
+export const SITE_TITLE = 'thoysinc';
 export const SITE_DESCRIPTION =
 	'Windows Server, Active Directory, Entra ID, Intune, PowerShell — 실무에서 직접 부딪힌 것만 기록합니다.';
 
