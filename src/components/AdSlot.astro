@@ -1,0 +1,44 @@
+---
+// 글 끝의 광고 한 칸. 설정이 비어 있으면 아무것도 렌더링하지 않습니다.
+//
+// 본문이 끝난 뒤, 목록으로 돌아가는 링크 위에만 둡니다. 읽는 흐름을 끊지 않고
+// 글 중간에 끼어들지 않게 하려는 것입니다.
+import { CLIENT_ID, SLOT_ARTICLE_END, adsEnabled } from '../data/adsense';
+
+const show = adsEnabled && SLOT_ARTICLE_END.trim().length > 0;
+---
+
+{
+	show && (
+		<aside class="ad" aria-label="광고">
+			<span class="label">광고</span>
+			<ins
+				class="adsbygoogle"
+				style="display:block"
+				data-ad-client={CLIENT_ID}
+				data-ad-slot={SLOT_ARTICLE_END}
+				data-ad-format="auto"
+				data-full-width-responsive="true"
+			/>
+			<script is:inline>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</aside>
+	)
+}
+
+<style>
+	.ad {
+		margin: 3em 0 0;
+		padding-top: 1.5em;
+		border-top: 1px solid rgb(var(--gray-light));
+	}
+	.label {
+		display: block;
+		margin-bottom: 0.6em;
+		color: rgb(var(--gray));
+		font-size: 0.75em;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+</style>

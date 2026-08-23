@@ -5,6 +5,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { url } from '../lib/urls';
+import AdSlot from '../components/AdSlot.astro';
 import PostMeta from '../components/PostMeta.astro';
 import { LANGS } from '../consts';
 
@@ -86,6 +87,7 @@ const { title, description, pubDate, updatedDate, heroImage, lang, tags, draft }
 						/>
 					</div>
 					<slot />
+					<AdSlot />
 					<div class="post-footer">
 						<p>
 							{
