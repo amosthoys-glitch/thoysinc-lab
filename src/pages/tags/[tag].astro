@@ -1,0 +1,83 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import PostMeta from '../../components/PostMeta.astro';
+import { getPosts, getTagCounts, type Post } from '../../lib/posts';
+
+export async function getStaticPaths() {
+	const [tags, posts] = await Promise.all([getTagCounts(), getPosts()]);
+	return tags.map(({ tag }) => ({
+		params: { tag },
+		props: { tag, posts: posts.filter((post) => post.data.tags.includes(tag)) },
+	}));
+}
+
+type Props = { tag: string; posts: Post[] };
+const { tag, posts } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ko">
+	<head>
+		<BaseHead title={`#${tag}`} description={`${tag} 태그가 달린 글 ${posts.length}개.`} />
+		<style>
+			main {
+				width: 800px;
+				max-width: calc(100% - 2em);
+			}
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			li {
+				padding: 1.25em 0;
+				border-bottom: 1px solid rgb(var(--gray-light));
+			}
+			li h2 {
+				margin: 0 0 0.3em 0;
+				font-size: 1.3em;
+				line-height: 1.3;
+			}
+			li h2 a {
+				color: rgb(var(--black));
+				text-decoration: none;
+			}
+			li h2 a:hover {
+				color: rgb(var(--accent));
+			}
+			li p {
+				margin: 0.5em 0 0 0;
+				color: rgb(var(--gray-dark));
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>#{tag}</h1>
+			<p><a href="/tags">← 모든 태그</a></p>
+			<ul>
+				{
+					posts.map((post) => (
+						<li>
+							<h2>
+								<a href={`/blog/${post.id}/`}>{post.data.title}</a>
+							</h2>
+							<PostMeta
+								pubDate={post.data.pubDate}
+								updatedDate={post.data.updatedDate}
+								lang={post.data.lang}
+								tags={post.data.tags}
+								draft={post.data.draft}
+							/>
+							<p>{post.data.description}</p>
+						</li>
+					))
+				}
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>

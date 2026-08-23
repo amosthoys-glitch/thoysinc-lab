@@ -1,0 +1,64 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import { getTagCounts } from '../../lib/posts';
+
+const tags = await getTagCounts();
+---
+
+<!doctype html>
+<html lang="ko">
+	<head>
+		<BaseHead title="Tags" description="주제별로 모아 본 글 목록." />
+		<style>
+			main {
+				width: 800px;
+				max-width: calc(100% - 2em);
+			}
+			.cloud {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.75em;
+				margin-top: 1.5em;
+				padding: 0;
+				list-style: none;
+			}
+			.cloud a {
+				display: inline-block;
+				padding: 0.4em 0.9em;
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: 999px;
+				color: rgb(var(--gray-dark));
+				text-decoration: none;
+			}
+			.cloud a:hover {
+				border-color: rgb(var(--accent));
+				color: rgb(var(--accent));
+			}
+			.count {
+				color: rgb(var(--gray));
+				font-size: 0.85em;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Tags</h1>
+			{tags.length === 0 && <p>아직 태그가 없습니다.</p>}
+			<ul class="cloud">
+				{
+					tags.map(({ tag, count }) => (
+						<li>
+							<a href={`/tags/${tag}/`}>
+								#{tag} <span class="count">{count}</span>
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>

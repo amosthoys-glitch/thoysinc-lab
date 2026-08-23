@@ -2,47 +2,121 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import PostMeta from '../components/PostMeta.astro';
+import { AUTHOR, AUTHOR_BIO_KO, SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { getPosts } from '../lib/posts';
+
+const recent = (await getPosts()).slice(0, 5);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 800px;
+				max-width: calc(100% - 2em);
+			}
+			.hero h1 {
+				margin-bottom: 0.2em;
+				font-size: 2.2em;
+			}
+			.hero .bio {
+				margin: 0 0 1em 0;
+				color: rgb(var(--gray-dark));
+				font-size: 1.1em;
+			}
+			.focus {
+				margin: 2.5em 0;
+				padding: 1.25em 1.5em;
+				border-left: 4px solid rgb(var(--accent));
+				background: rgb(var(--gray-light));
+				border-radius: 0 8px 8px 0;
+			}
+			.focus h2 {
+				margin: 0 0 0.5em 0;
+				font-size: 1.1em;
+			}
+			.focus ul {
+				margin: 0;
+				padding-left: 1.2em;
+				color: rgb(var(--gray-dark));
+			}
+			.recent ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			.recent li {
+				padding: 1em 0;
+				border-bottom: 1px solid rgb(var(--gray-light));
+			}
+			.recent li h3 {
+				margin: 0 0 0.3em 0;
+				font-size: 1.2em;
+			}
+			.recent li h3 a {
+				color: rgb(var(--black));
+				text-decoration: none;
+			}
+			.recent li h3 a:hover {
+				color: rgb(var(--accent));
+			}
+			.more {
+				display: inline-block;
+				margin-top: 1.5em;
+			}
+			.empty {
+				color: rgb(var(--gray));
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<section class="hero">
+				<h1>{AUTHOR}</h1>
+				<p class="bio">{AUTHOR_BIO_KO}</p>
+				<p>
+					문서를 요약한 글은 쓰지 않습니다. 실제로 장애를 냈고, 실제로 고쳤고, 그 과정의 로그와
+					스크립트가 남아 있는 것만 올립니다.
+				</p>
+			</section>
+
+			<section class="focus">
+				<h2>여기서 다루는 것</h2>
+				<ul>
+					<li>Active Directory 설계와 마이그레이션 (온프렘 → 하이브리드)</li>
+					<li>Entra ID · Intune 실무 구성과 함정</li>
+					<li>PowerShell 자동화 — 붙여넣고 바로 돌아가는 스크립트</li>
+					<li>홈랩(thoyslab.local) 구축 기록: 설계 결정과 그 이유</li>
+				</ul>
+			</section>
+
+			<section class="recent">
+				<h2>최근 글</h2>
+				{recent.length === 0 && <p class="empty">첫 글을 준비 중입니다.</p>}
+				<ul>
+					{
+						recent.map((post) => (
+							<li>
+								<h3>
+									<a href={`/blog/${post.id}/`}>{post.data.title}</a>
+								</h3>
+								<PostMeta
+									pubDate={post.data.pubDate}
+									updatedDate={post.data.updatedDate}
+									lang={post.data.lang}
+									tags={post.data.tags}
+									draft={post.data.draft}
+								/>
+							</li>
+						))
+					}
+				</ul>
+				<a class="more" href="/blog">모든 글 보기 →</a>
+			</section>
 		</main>
 		<Footer />
 	</body>
