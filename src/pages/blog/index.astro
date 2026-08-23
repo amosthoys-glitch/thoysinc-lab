@@ -5,6 +5,7 @@ import Header from '../../components/Header.astro';
 import PostMeta from '../../components/PostMeta.astro';
 import { SITE_DESCRIPTION } from '../../consts';
 import { getPosts } from '../../lib/posts';
+import { url } from '../../lib/urls';
 
 const posts = await getPosts();
 ---
@@ -87,7 +88,7 @@ const posts = await getPosts();
 					posts.map((post) => (
 						<li data-lang={post.data.lang}>
 							<h2>
-								<a href={`/blog/${post.id}/`}>{post.data.title}</a>
+								<a href={url(`blog/${post.id}/`)}>{post.data.title}</a>
 							</h2>
 							<PostMeta
 								pubDate={post.data.pubDate}

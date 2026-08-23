@@ -1,16 +1,17 @@
 ---
 import { SITE_TITLE, SOCIAL } from '../consts';
 import HeaderLink from './HeaderLink.astro';
+import { url } from '../lib/urls';
 ---
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<h2><a href={url()}>{SITE_TITLE}</a></h2>
 		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/tags">Tags</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
+			<HeaderLink href={url()}>Home</HeaderLink>
+			<HeaderLink href={url("blog")}>Blog</HeaderLink>
+			<HeaderLink href={url("tags")}>Tags</HeaderLink>
+			<HeaderLink href={url("about")}>About</HeaderLink>
 		</div>
 		<div class="social-links">
 			<a href={SOCIAL.github} target="_blank" rel="noopener">
@@ -31,7 +32,7 @@ import HeaderLink from './HeaderLink.astro';
 					></path></svg
 				>
 			</a>
-			<a href="/rss.xml">
+			<a href={url("rss.xml")}>
 				<span class="sr-only">RSS</span>
 				<svg viewBox="0 0 16 16" aria-hidden="true" width="24" height="24"
 					><path

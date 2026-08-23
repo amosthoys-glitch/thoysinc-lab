@@ -4,6 +4,7 @@ import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import { url } from '../lib/urls';
 import PostMeta from '../components/PostMeta.astro';
 import { LANGS } from '../consts';
 
@@ -93,7 +94,7 @@ const { title, description, pubDate, updatedDate, heroImage, lang, tags, draft }
 									: 'Found this useful? Subscribe via RSS. Corrections and questions are welcome by email.'
 							}
 						</p>
-						<a href="/blog">← {lang === 'ko' ? '글 목록으로' : 'All posts'}</a>
+						<a href={url('blog')}>← {lang === 'ko' ? '글 목록으로' : 'All posts'}</a>
 					</div>
 				</div>
 			</article>

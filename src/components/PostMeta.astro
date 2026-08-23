@@ -1,6 +1,7 @@
 ---
 import FormattedDate from './FormattedDate.astro';
 import { LANGS, type Lang } from '../consts';
+import { url } from '../lib/urls';
 
 interface Props {
 	pubDate: Date;
@@ -22,7 +23,7 @@ const { pubDate, updatedDate, lang, tags = [], draft = false } = Astro.props;
 		tags.length > 0 && (
 			<span class="tags">
 				{tags.map((tag) => (
-					<a href={`/tags/${tag}/`}>#{tag}</a>
+					<a href={url(`tags/${tag}/`)}>#{tag}</a>
 				))}
 			</span>
 		)

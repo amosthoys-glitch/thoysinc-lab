@@ -3,6 +3,7 @@ import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
 import { getTagCounts } from '../../lib/posts';
+import { url } from '../../lib/urls';
 
 const tags = await getTagCounts();
 ---
@@ -51,7 +52,7 @@ const tags = await getTagCounts();
 				{
 					tags.map(({ tag, count }) => (
 						<li>
-							<a href={`/tags/${tag}/`}>
+							<a href={url(`tags/${tag}/`)}>
 								#{tag} <span class="count">{count}</span>
 							</a>
 						</li>

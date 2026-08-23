@@ -5,6 +5,7 @@ import Header from '../components/Header.astro';
 import PostMeta from '../components/PostMeta.astro';
 import { AUTHOR, AUTHOR_BIO_KO, SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import { getPosts } from '../lib/posts';
+import { url } from '../lib/urls';
 
 const recent = (await getPosts()).slice(0, 5);
 ---
@@ -102,7 +103,7 @@ const recent = (await getPosts()).slice(0, 5);
 						recent.map((post) => (
 							<li>
 								<h3>
-									<a href={`/blog/${post.id}/`}>{post.data.title}</a>
+									<a href={url(`blog/${post.id}/`)}>{post.data.title}</a>
 								</h3>
 								<PostMeta
 									pubDate={post.data.pubDate}
@@ -115,7 +116,7 @@ const recent = (await getPosts()).slice(0, 5);
 						))
 					}
 				</ul>
-				<a class="more" href="/blog">모든 글 보기 →</a>
+				<a class="more" href={url('blog')}>모든 글 보기 →</a>
 			</section>
 		</main>
 		<Footer />

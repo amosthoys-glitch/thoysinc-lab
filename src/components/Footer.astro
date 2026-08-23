@@ -1,12 +1,13 @@
 ---
 import { AUTHOR, SOCIAL } from '../consts';
+import { url } from '../lib/urls';
 const today = new Date();
 ---
 
 <footer>
 	<p>&copy; {today.getFullYear()} {AUTHOR}</p>
 	<div class="links">
-		<a href="/rss.xml">RSS</a>
+		<a href={url("rss.xml")}>RSS</a>
 		<a href={SOCIAL.github} target="_blank" rel="noopener">GitHub</a>
 		<a href={SOCIAL.linkedin} target="_blank" rel="noopener">LinkedIn</a>
 		<a href={SOCIAL.email}>Email</a>

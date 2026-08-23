@@ -4,6 +4,7 @@ import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
 import PostMeta from '../../components/PostMeta.astro';
 import { getPosts, getTagCounts, type Post } from '../../lib/posts';
+import { url } from '../../lib/urls';
 
 export async function getStaticPaths() {
 	const [tags, posts] = await Promise.all([getTagCounts(), getPosts()]);
@@ -57,13 +58,13 @@ const { tag, posts } = Astro.props;
 		<Header />
 		<main>
 			<h1>#{tag}</h1>
-			<p><a href="/tags">← 모든 태그</a></p>
+			<p><a href={url('tags')}>← 모든 태그</a></p>
 			<ul>
 				{
 					posts.map((post) => (
 						<li>
 							<h2>
-								<a href={`/blog/${post.id}/`}>{post.data.title}</a>
+								<a href={url(`blog/${post.id}/`)}>{post.data.title}</a>
 							</h2>
 							<PostMeta
 								pubDate={post.data.pubDate}
