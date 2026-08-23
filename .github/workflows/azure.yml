@@ -1,0 +1,38 @@
+# 운영 배포 — Azure Static Web Apps (blog.thoysinc.com)
+#
+# 이쪽은 base 가 '/' 라 astro build 결과인 dist 를 그대로 올립니다.
+# (보험 노트 저장소는 /note 하위 재배치가 있어 deploy 를 올립니다.)
+name: Deploy to Azure
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: azure-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          action: upload
+          app_location: dist
+          skip_app_build: true
+          output_location: ""
