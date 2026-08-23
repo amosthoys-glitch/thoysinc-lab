@@ -8,7 +8,10 @@ import { AUTHOR, SOCIAL } from '../consts';
 <!doctype html>
 <html lang="ko">
 	<head>
-		<BaseHead title="About" description={`${AUTHOR} — 8년차 시스템 관리자. 이 블로그를 쓰는 이유.`} />
+		<BaseHead
+			title="About"
+			description={`${AUTHOR} — 2002년부터 리테일 IT 현장. 이 블로그를 쓰는 이유.`}
+		/>
 		<style>
 			main {
 				width: 720px;
@@ -26,6 +29,26 @@ import { AUTHOR, SOCIAL } from '../consts';
 			dd {
 				margin: 0;
 			}
+			.roles {
+				margin: 1.5em 0;
+				padding: 0;
+				list-style: none;
+			}
+			.roles li {
+				padding: 1em 0;
+				border-bottom: 1px solid rgb(var(--gray-light));
+			}
+			.roles .when {
+				color: rgb(var(--gray));
+				font-size: 0.9em;
+			}
+			.roles .what {
+				margin: 0.4em 0 0 0;
+				color: rgb(var(--gray-dark));
+			}
+			.roles strong {
+				font-size: 1.05em;
+			}
 		</style>
 	</head>
 	<body>
@@ -34,9 +57,44 @@ import { AUTHOR, SOCIAL } from '../consts';
 			<h1>About</h1>
 
 			<p>
-				{AUTHOR} 입니다. 애리조나 챈들러에서 8년 넘게 Windows 인프라를 운영해 왔습니다. 전공은
-				성서학이었고, IT 는 전부 현장에서 배웠습니다.
+				{AUTHOR} 입니다. 2002년 브루클린의 슈퍼마켓 체인에서 IT 일을 시작했고, 지금은 애리조나
+				챈들러에 있습니다. 전공은 성서학이었고, IT 는 전부 현장에서 배웠습니다.
 			</p>
+
+			<h2>해온 일</h2>
+			<ul class="roles">
+				<li>
+					<strong>Food Bazaar Supermarket</strong> — 시스템 관리자 / 가격 관리 팀장
+					<div class="when">2002 – 2009 · 뉴욕 브루클린</div>
+					<p class="what">
+						매장 3곳에서 15곳으로 늘어나는 동안 신규 매장 오픈의 IT 전부를 맡았습니다. 서버,
+						데스크탑, PDA, IBM POS, Zebra 프린터까지. LAN/WAN 설치와 구성, Windows 서버 관리,
+						여러 지점에 걸친 200대 이상 장비의 Tier 2·3 지원. 가격 관리 팀을 이끌며 자체
+						그룹웨어와 통합된 BRData 로 일일·프로모션 가격을 운영했습니다.
+					</p>
+				</li>
+				<li>
+					<strong>Super Associated Supermarket</strong> — 시스템 관리자
+					<div class="when">2009 – 2010 · 뉴욕 퀸즈</div>
+					<p class="what">
+						운영망과 스테이징망을 VLAN 으로 분리해 구축했습니다. 회계 부서의 매입 채무 처리를
+						위한 QuickBooks 지원과 BRData 소매 가격 관리도 함께 맡았습니다.
+					</p>
+				</li>
+				<li>
+					<strong>한미문화교육센터 (KACEC)</strong> — 데스크탑 지원 기술자
+					<div class="when">2021 – 현재 · 애리조나 챈들러</div>
+					<p class="what">
+						센터 내 장비의 현장 지원과 함께, 지역 주민 대상 컴퓨터 강좌를 운영합니다. 설명해 본
+						적 없는 걸 설명해야 하는 자리라, 아는 줄 알았던 것의 구멍이 잘 드러납니다.
+					</p>
+				</li>
+				<li>
+					<strong>Dessert Lover Inc.</strong> — 시스템 관리자
+					<div class="when">2024 – 2025 · 애리조나 피닉스</div>
+					<p class="what">다지점 POS 시스템과 데스크탑, 무선 네트워크를 관리했습니다.</p>
+				</li>
+			</ul>
 
 			<h2>이 블로그를 쓰는 이유</h2>
 			<p>
@@ -47,17 +105,30 @@ import { AUTHOR, SOCIAL } from '../consts';
 
 			<h2>홈랩</h2>
 			<p>
-				<code>thoyslab.local</code> 도메인으로 AD 홈랩을 운영합니다. 도메인 컨트롤러, 그룹 정책,
-				인증서 서비스, 하이브리드 조인까지 실제로 세워 보고 부순 뒤 그 기록을 남깁니다. 프로덕션에서
-				못 해 보는 실험을 여기서 합니다.
+				20년 넘게 매장 현장의 인프라를 다뤘지만, 도메인 컨트롤러를 설계 단계부터 세워 볼 기회는
+				많지 않았습니다. 그래서 <code>thoyslab.local</code> 로 AD 홈랩을 운영합니다. 도메인 컨트롤러,
+				그룹 정책, 인증서 서비스, 하이브리드 조인까지 실제로 세워 보고 부순 뒤 그 기록을 남깁니다.
+				프로덕션에서 못 해 보는 실험을 여기서 합니다.
 			</p>
+			<p>
+				그래서 이 블로그의 글은 두 종류입니다. <b>현장에서 실제로 겪은 것</b>과 <b>홈랩에서 직접
+				세워 보며 배운 것</b>. 어느 쪽인지는 글머리에 밝힙니다.
+			</p>
+
+			<h2>학력</h2>
+			<dl>
+				<dt>2011 – 2013</dt>
+				<dd>World Mission University, CA — 성서학 학사</dd>
+				<dt>1997 – 1999</dt>
+				<dd>Nyack College, NY</dd>
+			</dl>
 
 			<h2>연락</h2>
 			<dl>
 				<dt>Email</dt>
 				<dd><a href={SOCIAL.email}>amosthoys@gmail.com</a></dd>
 				<dt>GitHub</dt>
-				<dd><a href={SOCIAL.github} target="_blank" rel="noopener">github</a></dd>
+				<dd><a href={SOCIAL.github} target="_blank" rel="noopener">amosthoys-glitch</a></dd>
 			</dl>
 
 			<p>

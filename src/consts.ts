@@ -6,9 +6,9 @@ export const SITE_DESCRIPTION =
 
 export const AUTHOR = 'Jongmin (Amos) Jung';
 export const AUTHOR_BIO_KO =
-	'8년차 시스템 관리자. 애리조나 챈들러에서 Windows 인프라를 다룹니다.';
+	'2002년부터 리테일 IT 현장에 있었습니다. 매장 15곳을 새로 열며 서버·POS·네트워크를 깔았고, 200대 규모의 Tier 2·3 지원을 맡았습니다. 지금은 애리조나 챈들러에 있습니다.';
 export const AUTHOR_BIO_EN =
-	'Sysadmin with 8+ years in Windows infrastructure. Based in Chandler, Arizona.';
+	'In retail IT since 2002 — built out 15 new store locations, ran Tier 2/3 support across 200+ machines. Based in Chandler, Arizona.';
 
 export const SITE_URL = 'https://blog.thoysinc.com';
 
