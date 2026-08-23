@@ -29,7 +29,7 @@ jobs:
       - run: npm run build
         env:
           SITE_URL: https://amosthoys-glitch.github.io
-          SITE_BASE: /thoyslab-blog
+          SITE_BASE: /thoysinc-lab
           # 미리보기가 운영 사이트와 중복 콘텐츠로 잡히지 않게 색인을 막습니다.
           PUBLIC_NOINDEX: 'true'
       - uses: actions/upload-pages-artifact@v3
