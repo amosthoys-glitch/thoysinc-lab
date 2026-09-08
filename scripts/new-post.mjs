@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Thoys Inc.
+
 #!/usr/bin/env node
 // 새 글 파일을 src/content/blog/ 에 만듭니다.
 //   npm run new -- <slug> ["제목"] [--lang ko|en] [--tags a,b,c] [--mdx]

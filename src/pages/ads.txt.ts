@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Thoys Inc.
+
 // ads.txt — 애드센스가 요구하는 게시자 인증 파일.
 // 설정이 비어 있으면 빈 파일을 내보냅니다(잘못된 값이 나가는 것보다 낫습니다).
 import type { APIRoute } from 'astro';

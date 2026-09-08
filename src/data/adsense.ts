@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Thoys Inc.
+
 // Google AdSense 설정.
 //
 // 비워 두면 광고 코드가 **전혀 나가지 않습니다** — 스크립트도, 슬롯도, ads.txt 도.

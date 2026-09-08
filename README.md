@@ -108,3 +108,14 @@ Cloudflare Pages / Netlify / Vercel 모두 동일하게 동작합니다. 빌드 
 출처와 원문 링크를 표시한 짧은 인용은 괜찮습니다. 전문 재게시·번역·2차 가공·상업적 이용과
 AI 학습 데이터로의 사용은 사전 서면 허락이 필요합니다. 저장소가 공개되어 있다는 사실이
 글에 대한 이용 허락을 뜻하지는 않습니다.
+
+### 제3자 자산
+
+이 저장소에는 남의 것이 섞여 있다. 코드 파일의 `Copyright (c) Thoys Inc.` 표시는
+**우리가 쓴 부분**에 대한 것이며, 아래 자산의 권리는 각 원저작자에게 있다.
+
+| 자산 | 출처 | 라이선스 |
+|---|---|---|
+| 사이트 뼈대·컴포넌트 일부 | [Astro Blog 스타터](https://github.com/withastro/astro/tree/main/examples/blog) | MIT |
+| Atkinson Hyperlegible (`src/assets/fonts/`) | Braille Institute of America | 무료 배포 허용, 출처 표시 |
+| `src/assets/blog-placeholder-*.jpg` | Astro 스타터 기본 이미지 | 스타터와 동일 |

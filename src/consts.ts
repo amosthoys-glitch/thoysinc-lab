@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Thoys Inc.
+
 // Global site data. Imported anywhere via `import { ... } from '../consts'`.
 
 export const SITE_TITLE = 'thoysinc';

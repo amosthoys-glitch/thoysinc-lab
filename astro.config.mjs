@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Thoys Inc.
+
 // @ts-check
 
 import mdx from '@astrojs/mdx';

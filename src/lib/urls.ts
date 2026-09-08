@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Thoys Inc.
+
 // 사이트 내부 링크는 전부 이걸 거쳐야 합니다.
 // 운영은 base '/' 지만 GitHub Pages 미리보기는 '/thoysinc-lab' 아래에 올라가서,
 // 링크를 하드코딩하면 미리보기에서 전부 깨집니다.
