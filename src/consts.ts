@@ -18,6 +18,7 @@ export const SITE_URL = 'https://blog.thoysinc.com';
 export const SOCIAL = {
 	github: 'https://github.com/amosthoys-glitch',
 	email: 'mailto:amosthoys@gmail.com',
+	linkedin: 'https://www.linkedin.com/in/jongmin-jung/',
 };
 
 export const LANGS = {

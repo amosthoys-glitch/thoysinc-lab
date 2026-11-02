@@ -12,7 +12,7 @@ import { AUTHOR, SOCIAL } from '../consts';
 	<head>
 		<BaseHead
 			title="About"
-			description={`${AUTHOR} — 2002년부터 리테일 IT 현장. 이 블로그를 쓰는 이유.`}
+			description={`${AUTHOR} — Sr. IT Support Engineer. 2002년부터 리테일 IT 현장. 이 블로그를 쓰는 이유.`}
 		/>
 		<style>
 			main {
@@ -51,52 +51,76 @@ import { AUTHOR, SOCIAL } from '../consts';
 			.roles strong {
 				font-size: 1.05em;
 			}
+			.headline {
+				margin: -0.4em 0 1.2em 0;
+				color: rgb(var(--gray));
+				font-size: 0.95em;
+			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
 			<h1>About</h1>
-
+			<p class="headline">
+				Sr. IT Support Engineer · Help Desk &amp; ITSM · Microsoft 365 · Power BI · Retail &amp; POS
+				Systems · SAP Business One 학습 중 · 한국어/영어
+			</p>
 			<p>
 				{AUTHOR} 입니다. 2002년 브루클린의 슈퍼마켓 체인에서 IT 일을 시작했고, 지금은 애리조나
-				챈들러에 있습니다. 전공은 성서학이었고, IT 는 전부 현장에서 배웠습니다.
+				챈들러의 ATEC USA, Inc. 에서 IT 지원을 맡고 있습니다. 전공은 성서학이었고, IT 는 전부
+				현장에서 배웠습니다.
 			</p>
 
 			<h2>해온 일</h2>
 			<ul class="roles">
 				<li>
-					<strong>Food Bazaar Supermarket</strong> — 시스템 관리자 / 가격 관리 팀장
-					<div class="when">2002 – 2009 · 뉴욕 브루클린</div>
+					<strong>ATEC USA, Inc.</strong> — Sr. IT Support Engineer
+					<div class="when">2026.05 – 현재 · 애리조나 챈들러</div>
 					<p class="what">
-						매장 3곳에서 15곳으로 늘어나는 동안 신규 매장 오픈의 IT 전부를 맡았습니다. 서버,
-						데스크탑, PDA, IBM POS, Zebra 프린터까지. LAN/WAN 설치와 구성, Windows 서버 관리,
-						여러 지점에 걸친 200대 이상 장비의 Tier 2·3 지원. 가격 관리 팀을 이끌며 자체
-						그룹웨어와 통합된 BRData 로 일일·프로모션 가격을 운영했습니다.
-					</p>
-				</li>
-				<li>
-					<strong>Super Associated Supermarket</strong> — 시스템 관리자
-					<div class="when">2009 – 2010 · 뉴욕 퀸즈</div>
-					<p class="what">
-						본사 사용자를 위한 Active Directory 를 구축하고 부서별로 조직을 나눴습니다. Exchange
-						를 AD 와 연동해 사내 메일을 운영했고, DHCP 와 VLAN 으로 사무실 네트워크를
-						정리했습니다. 매장과 연결되는 구간은 사무실 망과 분리했습니다. 웹서버 운영, 회계
-						부서의 QuickBooks 지원, BRData 소매 가격 관리도 함께 맡았습니다.
-					</p>
-				</li>
-				<li>
-					<strong>한미문화교육센터 (KACEC)</strong> — 데스크탑 지원 기술자
-					<div class="when">2021 – 현재 · 애리조나 챈들러</div>
-					<p class="what">
-						센터 내 장비의 현장 지원과 함께, 지역 주민 대상 컴퓨터 강좌를 운영합니다. 설명해 본
-						적 없는 걸 설명해야 하는 자리라, 아는 줄 알았던 것의 구멍이 잘 드러납니다.
+						회사의 IT 헬프데스크 플랫폼을 Microsoft 365 위에 직접 설계하고 만들었습니다. SharePoint
+						목록으로 티켓 시스템을 만들고 QR 코드·링크·Teams 로 접수받아 분류, 우선순위, SLA, 처리
+						시간을 추적합니다. 티켓과 연결된 전사 IT 자산 대장, Power Automate 로 만든 알림·주간
+						요약·자산 라벨 갱신, 입사·퇴사 때 장비 지급과 회수를 티켓으로 잇는 절차, Excel Office
+						Scripts 와 Power BI 로 만든 주간·월간 보고서까지 맡았고, 유지보수와 인수인계를 위한
+						구성 문서도 남겼습니다. 하드웨어·소프트웨어·네트워크 일상 지원도 함께 합니다.
 					</p>
 				</li>
 				<li>
 					<strong>Dessert Lover Inc.</strong> — 시스템 관리자
-					<div class="when">2024 – 2025 · 애리조나 피닉스</div>
-					<p class="what">다지점 POS 시스템과 데스크탑, 무선 네트워크를 관리했습니다.</p>
+					<div class="when">2024.08 – 2025.09 · 애리조나 피닉스</div>
+					<p class="what">
+						여러 매장의 POS 시스템을 관리하고, 매장과 사무실의 데스크탑과 무선 네트워크를
+						운영했습니다. 직원 대상 하드웨어·소프트웨어·네트워크 지원과 함께 매장 운영(인력, 인사,
+						재고 관리)도 맡았습니다.
+					</p>
+				</li>
+				<li>
+					<strong>한미문화교육센터 (Korean American Culture and Education Center)</strong> — 데스크탑 지원 기술자
+					<div class="when">2021.08 – 2026.05 · 애리조나 챈들러</div>
+					<p class="what">
+						센터의 노트북과 데스크탑을 현장에서 지원하고 하드웨어·소프트웨어 문제를 진단해
+						해결했습니다. 지역 주민의 디지털 활용 능력을 높이는 컴퓨터 강좌도 운영했습니다.
+					</p>
+				</li>
+				<li>
+					<strong>Super Associated Supermarket</strong> — 시스템 관리자
+					<div class="when">2009.06 – 2010.04 · 뉴욕 퀸즈</div>
+					<p class="what">
+						서버 2대, 사용자 10명 규모에서 운영망과 스테이징망을 VLAN 으로 나누는 작업을 계획하고
+						실행했습니다. 사용자 하드웨어·소프트웨어 문제 해결, 회계 부서의 QuickBooks(외상 매입금)
+						지원, BRData 백오피스로 소매 가격 관리도 맡았습니다.
+					</p>
+				</li>
+				<li>
+					<strong>Bogopa Service Corp / Food Bazaar Supermarket</strong> — 시스템 관리자 / 가격 관리 팀장
+					<div class="when">2002.08 – 2009.03 · 뉴욕 브루클린</div>
+					<p class="what">
+						신규 매장 15곳 오픈의 IT 프로젝트를 일정과 예산 안에 마쳤습니다. 보안이 갖춰진 LAN/WAN
+						을 설치·구성·유지하고 Windows 서버와 데스크탑을 관리했으며, 여러 지점의 사용자 200명
+						이상을 Tier 2·3 로 지원했습니다. 가격 관리 팀을 이끌며 자체 그룹웨어와 연동된 BRData 로
+						일일·프로모션 가격을 운영했습니다.
+					</p>
 				</li>
 			</ul>
 
@@ -134,6 +158,8 @@ import { AUTHOR, SOCIAL } from '../consts';
 				<dd><a href={SOCIAL.email}>amosthoys@gmail.com</a></dd>
 				<dt>GitHub</dt>
 				<dd><a href={SOCIAL.github} target="_blank" rel="noopener">amosthoys-glitch</a></dd>
+				<dt>LinkedIn</dt>
+				<dd><a href={SOCIAL.linkedin} target="_blank" rel="noopener">jongmin-jung</a></dd>
 			</dl>
 
 			<p>
