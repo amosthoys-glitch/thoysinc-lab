@@ -5,9 +5,17 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 
 export type Post = CollectionEntry<'blog'>;
 
-/** 발행된 글을 최신순으로. 드래프트는 dev 서버에서만 보입니다. */
+// pubDate 는 날짜만 적으므로 UTC 자정으로 읽힙니다. 애리조나(UTC-7, 서머타임 없음)
+// 자정에 공개되도록 7시간을 더해 비교합니다. 매일 새벽 다시 빌드하는 워크플로가
+// 그날 날짜의 글을 공개합니다(예약 발행).
+const ARIZONA_OFFSET_MS = 7 * 60 * 60 * 1000;
+
+const isLive = (data: Post['data']) =>
+	!data.draft && data.pubDate.getTime() + ARIZONA_OFFSET_MS <= Date.now();
+
+/** 공개할 글을 최신순으로. dev 서버에서는 드래프트와 예약 글도 보입니다. */
 export async function getPosts(): Promise<Post[]> {
-	const posts = await getCollection('blog', ({ data }) => import.meta.env.DEV || !data.draft);
+	const posts = await getCollection('blog', ({ data }) => import.meta.env.DEV || isLive(data));
 	return posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 }
 
