@@ -22,13 +22,14 @@ const recent = (await getPosts()).slice(0, 5);
 				max-width: calc(100% - 2em);
 			}
 			.hero h1 {
-				margin-bottom: 0.2em;
-				font-size: 2.2em;
+				margin-bottom: 0.15em;
+				font-size: 1.5em;
 			}
 			.hero .bio {
-				margin: 0 0 1em 0;
+				margin: 0 0 0.4em 0;
 				color: rgb(var(--gray-dark));
-				font-size: 1.1em;
+				font-size: 0.95em;
+				line-height: 1.6;
 			}
 			.focus {
 				margin: 2.5em 0;
@@ -81,10 +82,7 @@ const recent = (await getPosts()).slice(0, 5);
 			<section class="hero">
 				<h1>{AUTHOR}</h1>
 				<p class="bio">{AUTHOR_BIO_KO}</p>
-				<p>
-					문서를 요약한 글은 쓰지 않습니다. 실제로 장애를 냈고, 실제로 고쳤고, 그 과정의 로그와
-					스크립트가 남아 있는 것만 올립니다.
-				</p>
+				<p class="bio">직접 겪고 고친 것, 그리고 이번 주 관리자가 챙겨야 할 보안 이슈를 씁니다.</p>
 			</section>
 
 			<section class="focus">
@@ -94,6 +92,7 @@ const recent = (await getPosts()).slice(0, 5);
 					<li>Active Directory 홈랩 — 도메인 컨트롤러, 그룹 정책, 인증서 서비스를 직접 세우며 배운 것</li>
 					<li>Entra ID · Intune — 하이브리드 구성의 함정</li>
 					<li>PowerShell 자동화 — 붙여넣고 바로 돌아가는 스크립트</li>
+					<li>이번 주 보안 — 실제 공격에 쓰이는 취약점과 지금 할 일</li>
 				</ul>
 			</section>
 
