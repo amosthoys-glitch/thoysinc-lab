@@ -5,7 +5,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import PostMeta from '../components/PostMeta.astro';
-import { AUTHOR, AUTHOR_BIO_KO, SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import { getPosts } from '../lib/posts';
 import { url } from '../lib/urls';
 
@@ -21,18 +21,8 @@ const recent = (await getPosts()).slice(0, 5);
 				width: 800px;
 				max-width: calc(100% - 2em);
 			}
-			.hero h1 {
-				margin-bottom: 0.15em;
-				font-size: 1.5em;
-			}
-			.hero .bio {
-				margin: 0 0 0.4em 0;
-				color: rgb(var(--gray-dark));
-				font-size: 0.95em;
-				line-height: 1.6;
-			}
 			.focus {
-				margin: 2.5em 0;
+				margin: 1em 0 2.5em 0;
 				padding: 1.25em 1.5em;
 				border-left: 4px solid rgb(var(--accent));
 				background: rgb(var(--gray-light));
@@ -46,6 +36,14 @@ const recent = (await getPosts()).slice(0, 5);
 				margin: 0;
 				padding-left: 1.2em;
 				color: rgb(var(--gray-dark));
+			}
+			.focus li {
+				margin: 0.25em 0;
+			}
+			.focus .who {
+				margin: 0.9em 0 0 0;
+				font-size: 0.9em;
+				color: rgb(var(--gray));
 			}
 			.recent ul {
 				margin: 0;
@@ -79,21 +77,16 @@ const recent = (await getPosts()).slice(0, 5);
 	<body>
 		<Header />
 		<main>
-			<section class="hero">
-				<h1>{AUTHOR}</h1>
-				<p class="bio">{AUTHOR_BIO_KO}</p>
-				<p class="bio">직접 겪고 고친 것, 그리고 이번 주 관리자가 챙겨야 할 보안 이슈를 씁니다.</p>
-			</section>
-
 			<section class="focus">
 				<h2>여기서 다루는 것</h2>
 				<ul>
-					<li>다지점 리테일 인프라 — 매장 네트워크, POS, 서버 운영에서 실제로 겪은 것</li>
-					<li>Active Directory 홈랩 — 도메인 컨트롤러, 그룹 정책, 인증서 서비스를 직접 세우며 배운 것</li>
-					<li>Entra ID · Intune — 하이브리드 구성의 함정</li>
-					<li>PowerShell 자동화 — 붙여넣고 바로 돌아가는 스크립트</li>
-					<li>이번 주 보안 — 실제 공격에 쓰이는 취약점과 지금 할 일</li>
+					<li><b>이번 주 보안</b> — 실제 공격에 쓰이는 취약점과, 관리자가 지금 할 일</li>
+					<li><b>Active Directory 홈랩</b> — 도메인 컨트롤러, 그룹 정책, 이중화를 직접 세우고 부순 기록 (<a href={url('blog/adlab-01-design/')}>연재 1회부터</a>)</li>
+					<li><b>다지점 리테일 인프라</b> — 매장 네트워크, POS, 서버 운영에서 실제로 겪은 것</li>
+					<li><b>Entra ID · Intune</b> — 하이브리드 구성의 함정</li>
+					<li><b>PowerShell 자동화</b> — 붙여넣고 바로 돌아가는 스크립트</li>
 				</ul>
+				<p class="who">글쓴이 소개는 <a href={url('about')}>About</a>에 있습니다.</p>
 			</section>
 
 			<section class="recent">
