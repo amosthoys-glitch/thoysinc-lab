@@ -7,6 +7,7 @@ tags: ['security', 'hot-issue', 'vpn', 'ivanti', 'cisco', 'active-directory']
 ---
 
 > 기준: 2026년 10월 26일 ~ 11월 1일 공개 정보 · 출처는 글 끝에 있습니다
+>
 > 대상: Ivanti Connect Secure, Cisco Secure Firewall ASA/FTD로 원격 접속 VPN을 운영하는 곳
 
 이번 주는 VPN 장비 두 종류가 미국 사이버보안청(CISA)의 **"알려진 악용 취약점(KEV)" 목록**에 올랐습니다. KEV는 "이론상 위험"이 아니라 **실제 공격에 쓰이는 것이 확인된** 취약점만 올리는 목록입니다. 둘 다 인터넷에 그대로 노출되는 장비라, 해당된다면 이번 주 안에 처리하는 것을 권합니다.

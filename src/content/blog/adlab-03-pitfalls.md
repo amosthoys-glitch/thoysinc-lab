@@ -7,6 +7,7 @@ tags: ['active-directory', 'homelab', 'powershell', 'troubleshooting', 'dns']
 ---
 
 > 환경: Windows PowerShell 5.1 · Windows Server 2025 · Windows 11 Enterprise · Hyper-V 향상된 세션
+>
 > 연재 「노트북 한 대로 AD 홈랩」 3/8 · 작업일 2026-08-20
 
 [2회](/blog/adlab-02-build/)의 구축 절차는 문서를 보면 누구나 따라 할 수 있습니다. 이번 회의 일곱 가지는 직접 손을 대야만 만나는 것들입니다. 대부분 실무에서도 그대로 반복됩니다.

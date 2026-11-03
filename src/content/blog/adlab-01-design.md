@@ -7,6 +7,7 @@ tags: ['active-directory', 'homelab', 'hyper-v', 'networking']
 ---
 
 > 환경: Windows 11 Pro (빌드 26200) 호스트 · Hyper-V · Windows Server 2025 Evaluation (빌드 26100) · Windows 11 Enterprise Evaluation 25H2
+>
 > 연재 「노트북 한 대로 AD 홈랩」 1/8 · 작업일 2026-08-20
 
 8월에 Active Directory 홈랩을 처음부터 다시 세웠습니다. 목표는 단순했습니다. **도메인 컨트롤러에서 만든 일반 사용자 계정으로 다른 컴퓨터에 로그인되는 것.** AD가 하는 일의 본질이 그것이고, 나머지는 그 위에 얹히는 것들입니다.

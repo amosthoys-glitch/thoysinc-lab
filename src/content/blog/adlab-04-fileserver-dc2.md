@@ -7,6 +7,7 @@ tags: ['active-directory', 'homelab', 'file-server', 'hyper-v', 'sysprep', 'dns'
 ---
 
 > 환경: Windows Server 2025 · Hyper-V · PowerShell Direct
+>
 > 연재 「노트북 한 대로 AD 홈랩」 4/8 · 작업일 2026-08-21
 
 [2회](/blog/adlab-02-build/)까지의 랩은 DC가 한 대였습니다. 동작은 했지만 DC1이 멈추면 도메인 전체가 멈추는 구조였고, 점검 스크립트의 "복제" 항목은 늘 비어 있었습니다. 이번 목표는 두 가지였습니다. **파일서버를 실제로 서비스하게 만들 것, 그리고 DC를 이중화할 것.**

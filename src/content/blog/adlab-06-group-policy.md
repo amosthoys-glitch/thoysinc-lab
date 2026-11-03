@@ -7,6 +7,7 @@ tags: ['active-directory', 'homelab', 'group-policy', 'delegation', 'powershell'
 ---
 
 > 환경: Windows Server 2025 · GPMC · GroupPolicy PowerShell 모듈 · Windows 11 Enterprise 클라이언트
+>
 > 연재 「노트북 한 대로 AD 홈랩」 6/8 · 작업일 2026-08-22
 
 [2회](/blog/adlab-02-build/)에서 공들여 만든 OU 구조에, 여기까지 오는 동안 정책이 하나도 걸려 있지 않았습니다.

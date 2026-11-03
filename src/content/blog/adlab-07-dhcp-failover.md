@@ -7,6 +7,7 @@ tags: ['active-directory', 'homelab', 'dhcp', 'high-availability', 'powershell']
 ---
 
 > 환경: Windows Server 2025 DHCP · DC1(주) · DC2(대기) · 단일 사이트
+>
 > 연재 「노트북 한 대로 AD 홈랩」 7/8 · 작업일 2026-08-22
 
 DHCP를 DC1 한 대에만 두고 여섯 단계를 지나왔습니다. 설계 메모에는 "가장 시급한 이중화"라고 적어 놓고 정작 손대지 않은 항목이었습니다.

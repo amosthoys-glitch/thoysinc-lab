@@ -7,6 +7,7 @@ tags: ['active-directory', 'homelab', 'hyper-v', 'migration', 'vtpm']
 ---
 
 > 환경: Hyper-V on Windows 11 (빌드 26200) → Hyper-V on Windows 11 (빌드 26200) · VM 구성 버전 12.0
+>
 > 연재 「노트북 한 대로 AD 홈랩」 8/8 · 작업일 2026-08-21 · 약 2시간
 
 순서를 조금 거슬러 올라갑니다. [2회](/blog/adlab-02-build/)까지 마친 다음 날, 랩을 더 큰 노트북으로 옮겼습니다. [4회](/blog/adlab-04-fileserver-dc2/) 이후는 전부 새 기기에서 한 작업입니다.

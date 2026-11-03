@@ -7,6 +7,7 @@ tags: ['active-directory', 'homelab', 'fsmo', 'dns', 'replication']
 ---
 
 > 환경: Windows Server 2025 · 단일 도메인 · DC 2대(DC1·DC2, 둘 다 GC)
+>
 > 연재 「노트북 한 대로 AD 홈랩」 5/8 · 작업일 2026-08-22
 
 [4회](/blog/adlab-04-fileserver-dc2/)에서 DC가 두 대가 되자 처음으로 할 수 있는 연습이 생겼습니다. FSMO 역할을 다른 DC로 옮기는 것입니다. 이전 자체는 한 줄이었습니다. 문제는 그 뒤였습니다.

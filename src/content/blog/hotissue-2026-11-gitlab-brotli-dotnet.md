@@ -7,6 +7,7 @@ tags: ['security', 'hot-issue', 'gitlab', 'dotnet', 'brotli', 'patching']
 ---
 
 > 기준: 2026년 10월 25일 ~ 11월 2일 공개 정보 · 출처는 글 끝에 있습니다
+>
 > 대상: 직접 운영하는 GitLab(Self-managed), .NET 8·9·10으로 만든 사내 웹앱·API, Brotli 압축을 쓰는 서버
 
 이번 주 두 건 모두 미국 사이버보안청(CISA)의 **"알려진 악용 취약점(KEV)" 목록**에 올랐습니다. 그리고 우연히도 마감이 겹칩니다. **11월 10일**은 Brotli 취약점의 연방 기관 조치 기한이자, .NET 8과 9의 지원이 끝나는 날이자, 11월 정기 보안 업데이트(Patch Tuesday) 날입니다.

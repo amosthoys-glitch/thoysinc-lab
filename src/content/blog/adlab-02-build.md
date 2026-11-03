@@ -7,6 +7,7 @@ tags: ['active-directory', 'homelab', 'hyper-v', 'powershell', 'dns', 'dhcp']
 ---
 
 > 환경: Windows Server 2025 Standard (Desktop Experience) · Windows 11 Enterprise · Hyper-V on Windows 11 Pro
+>
 > 연재 「노트북 한 대로 AD 홈랩」 2/8 · 작업일 2026-08-20 · 약 4시간
 
 [1회](/blog/adlab-01-design/)에서 정한 설계대로 실제로 세운 기록입니다. 모든 단계는 PowerShell 스크립트로 만들었고, **다시 돌려도 안전하게(멱등)** 작성했습니다. 중간에 실패해도 처음부터 다시 돌리면 이미 된 것은 건너뛰고 남은 것만 합니다.
