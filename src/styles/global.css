@@ -29,7 +29,7 @@ body {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: rgb(var(--gray-dark));
-	font-size: 20px;
+	font-size: 17px;
 	line-height: 1.7;
 }
 main {
@@ -49,19 +49,19 @@ h6 {
 	line-height: 1.2;
 }
 h1 {
-	font-size: 3.052em;
+	font-size: 2.1em;
 }
 h2 {
-	font-size: 2.441em;
+	font-size: 1.55em;
 }
 h3 {
-	font-size: 1.953em;
+	font-size: 1.25em;
 }
 h4 {
-	font-size: 1.563em;
+	font-size: 1.1em;
 }
 h5 {
-	font-size: 1.25em;
+	font-size: 1em;
 }
 strong,
 b {
@@ -110,7 +110,8 @@ blockquote {
 	border-left: 4px solid var(--accent);
 	padding: 0 0 0 20px;
 	margin: 0;
-	font-size: 1.333em;
+	font-size: 0.95em;
+	color: rgb(var(--gray));
 }
 hr {
 	border: none;
@@ -118,7 +119,7 @@ hr {
 }
 @media (max-width: 720px) {
 	body {
-		font-size: 18px;
+		font-size: 16px;
 	}
 	main {
 		padding: 1em;
