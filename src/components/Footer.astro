@@ -7,11 +7,17 @@ const today = new Date();
 ---
 
 <footer>
+	<p class="disc">
+		글은 개인 경험과 홈랩 실습을 바탕으로 한 일반 정보이며, 소속 회사의 입장과 관계가 없습니다. 명령과 설정은
+		실제 환경에 적용하기 전에 시험 환경에서 먼저 확인하세요. 이 블로그는 Google AdSense 광고를 게재하며 광고
+		수익을 받습니다. 글에서 다루는 제품·업체로부터 대가를 받지 않습니다.
+	</p>
 	<p>&copy; {today.getFullYear()} {AUTHOR}</p>
 	<div class="links">
 		<a href={url("rss.xml")}>RSS</a>
 		<a href={SOCIAL.github} target="_blank" rel="noopener">GitHub</a>
 		<a href={SOCIAL.email}>Email</a>
+		<a href={url("privacy")}>개인정보처리방침</a>
 	</div>
 </footer>
 <style>
@@ -20,6 +26,12 @@ const today = new Date();
 		background: linear-gradient(var(--gray-gradient)) no-repeat;
 		color: rgb(var(--gray));
 		text-align: center;
+	}
+	.disc {
+		max-width: 640px;
+		margin: 0 auto 1em !important;
+		font-size: 0.85em;
+		line-height: 1.6;
 	}
 	footer p {
 		margin: 0;

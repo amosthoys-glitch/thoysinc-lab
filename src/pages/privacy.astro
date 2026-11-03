@@ -1,0 +1,99 @@
+---
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Thoys Inc.
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SOCIAL } from '../consts';
+
+// 내용이 바뀌면 이 날짜를 함께 고칩니다.
+const UPDATED = '2026년 11월 2일';
+const email = SOCIAL.email.replace(/^mailto:/, '');
+---
+<!doctype html>
+<html lang="ko">
+	<head>
+		<BaseHead title="개인정보처리방침" description="blog.thoysinc.com 이 방문자 정보를 어떻게 다루는지 설명합니다." />
+		<style>
+			main {
+				width: 720px;
+				max-width: calc(100% - 2em);
+			}
+			.updated {
+				color: rgb(var(--gray));
+				font-size: 0.9em;
+			}
+			li {
+				margin-bottom: 0.4em;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>개인정보처리방침</h1>
+			<p class="updated">최종 수정일: {UPDATED}</p>
+			<p>
+				blog.thoysinc.com(이하 "이 블로그")은 방문자의 개인정보를 소중히 다룹니다. 이 문서는 이 블로그가 어떤 정보를 어떻게
+				다루는지 설명합니다.
+			</p>
+
+			<h2>1. 직접 받는 정보</h2>
+			<p>
+				이 블로그에는 회원 가입, 댓글, 입력 양식이 없습니다. 방문자가 이메일로 연락하는 경우에만 보낸 사람의 이메일 주소와
+				내용을 받으며, 답장을 위해서만 쓰고 다른 목적으로 쓰거나 제3자에게 넘기지 않습니다.
+			</p>
+
+			<h2>2. 자동으로 기록되는 정보</h2>
+			<p>
+				이 블로그는 Microsoft Azure Static Web Apps에서 운영됩니다. 다른 웹사이트와 마찬가지로 호스팅 서버는 접속 시 IP 주소,
+				브라우저 종류, 요청한 페이지 같은 기술 정보를 보안과 운영 목적으로 기록할 수 있습니다.
+			</p>
+
+			<h2>3. 쿠키와 광고</h2>
+			<p>이 블로그는 Google AdSense 광고를 게재합니다.</p>
+			<ul>
+				<li>
+					Google을 포함한 제3자 공급업체는 쿠키를 사용하여 방문자가 이 블로그나 다른 웹사이트를 이전에 방문한 기록을 바탕으로
+					광고를 게재합니다.
+				</li>
+				<li>
+					Google은 광고 쿠키를 사용하여 이 블로그 및 인터넷의 다른 사이트 방문 기록을 바탕으로 방문자에게 맞춤 광고를 게재할 수
+					있습니다.
+				</li>
+				<li>
+					방문자는 <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google 광고 설정</a>에서 맞춤 광고를
+					해제할 수 있으며, <a href="https://www.aboutads.info" target="_blank" rel="noopener">www.aboutads.info</a>에서 제3자
+					공급업체의 맞춤 광고 쿠키 사용을 해제할 수 있습니다.
+				</li>
+				<li>
+					Google이 데이터를 사용하는 방식은
+					<a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener"
+						>Google 파트너 사이트 데이터 사용 안내</a
+					>에서 확인할 수 있습니다.
+				</li>
+			</ul>
+			<p>브라우저 설정에서 쿠키를 거부하거나 삭제할 수 있습니다. 쿠키를 거부해도 이 블로그의 글은 그대로 읽을 수 있습니다.</p>
+
+			<h2>4. 고지</h2>
+			<p>
+				이 블로그의 글은 개인 경험과 홈랩 실습을 바탕으로 한 일반 정보이며, 글쓴이가 일하는 회사의 입장과 관계가 없습니다.
+				명령과 설정은 실제 운영 환경에 적용하기 전에 시험 환경에서 먼저 확인하세요. 글에서 다루는 제품이나 업체로부터 대가를
+				받지 않습니다.
+			</p>
+
+			<h2>5. 외부 링크와 어린이의 개인정보</h2>
+			<p>
+				글 안의 외부 링크로 이동한 뒤에는 그 사이트의 개인정보처리방침이 적용됩니다. 이 블로그는 13세 미만 어린이를 대상으로
+				하지 않으며, 어린이의 개인정보를 의도적으로 수집하지 않습니다.
+			</p>
+
+			<h2>6. 문의</h2>
+			<p>
+				개인정보와 관련한 문의는 <a href={SOCIAL.email}>{email}</a>로 보내 주세요. 이 방침이 바뀌면 이 페이지에 고친 날짜와 함께
+				알립니다.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>

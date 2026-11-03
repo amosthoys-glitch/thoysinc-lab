@@ -14,7 +14,7 @@
 //
 // 보험 블로그(www.thoysinc.com)에는 붙이지 않습니다. 그쪽 광고 슬롯은 경쟁
 // 보험사가 사 가기 때문에, 상담으로 올 독자를 몇 센트에 넘기는 셈이 됩니다.
-export const CLIENT_ID = '';
+export const CLIENT_ID = 'ca-pub-1192328371285794';
 
 /** 광고 슬롯 ID. 승인 후 애드센스에서 광고 단위를 만들면 나옵니다. */
 export const SLOT_ARTICLE_END = '';

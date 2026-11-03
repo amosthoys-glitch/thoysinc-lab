@@ -49,6 +49,9 @@ const pageTitle = title === SITE_TITLE ? title : `${title} · ${SITE_TITLE}`;
 <meta name="generator" content={Astro.generator} />
 {
 	/* 애드센스. CLIENT_ID 가 비어 있으면 이 스크립트 자체가 나가지 않습니다. */
+	adsEnabled && <meta name="google-adsense-account" content={CLIENT_ID} />
+}
+{
 	adsEnabled && (
 		<script
 			async
