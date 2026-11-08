@@ -40,3 +40,11 @@ jobs:
           app_location: dist
           skip_app_build: true
           output_location: ""
+
+      # 새 글이 배포되면 Bing·Naver 등에 바로 알립니다(IndexNow). 실패해도 배포는 그대로 성공 처리합니다.
+      - name: IndexNow 제출
+        if: github.event_name == 'push'
+        continue-on-error: true
+        run: |
+          sleep 60
+          node scripts/indexnow.mjs blog.thoysinc.com
