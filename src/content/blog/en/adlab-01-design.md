@@ -66,7 +66,7 @@ It mattered that the external drive was a **USB hard disk**, not an SSD. Its ran
 
 I named the lab domain `thoyslab.local` and did not use the real domain I own, `thoysinc.com`. If the lab's DNS zone overlaps a real domain, then later, on the same network, the lab DNS can answer for the real services and send clients to the wrong place.
 
-That said, `.local` was not the best choice either. It brings problems such as mDNS conflicts and no way to get public certificates. I wrote that up separately in the prologue, [the home lab AD domain name post](/blog/ad-domain-naming/) (Korean).
+That said, `.local` was not the best choice either. It brings problems such as mDNS conflicts and no way to get public certificates. I wrote that up separately in the prologue, [the home lab AD domain name post](/blog/en/ad-domain-naming/).
 
 ## What you need — two evaluation ISOs
 
@@ -93,14 +93,12 @@ With the design done, next comes the build: nine scripts to create the virtual s
 
 ### Series: "An AD Home Lab on One Laptop"
 
-Parts not yet translated link to the Korean original.
-
-0. [Home lab AD domain names: where `.local` gets you stuck later](/blog/ad-domain-naming/) (prologue, Korean)
+0. [Home lab AD domain names: where `.local` gets you stuck later](/blog/en/ad-domain-naming/) (prologue)
 1. [Design — one laptop, one domain](/blog/en/adlab-01-design/)
-2. [Build — from DC promotion to a domain login](/blog/adlab-02-build/) (Korean)
-3. [Seven places I got stuck](/blog/adlab-03-pitfalls/) (Korean)
-4. [A file server, and a second DC without an ISO](/blog/adlab-04-fileserver-dc2/) (Korean)
-5. [Moving FSMO roles, and how long DNS takes to follow](/blog/adlab-05-fsmo/) (Korean)
-6. [The OUs were there, but nothing was linked — Group Policy](/blog/adlab-06-group-policy/) (Korean)
-7. [You only know it's redundant when you turn it off — DHCP failover](/blog/adlab-07-dhcp-failover/) (Korean)
-8. [Moving the whole lab to another PC](/blog/adlab-08-migration/) (Korean)
+2. [Build — from DC promotion to a domain login](/blog/en/adlab-02-build/)
+3. [Seven places I got stuck](/blog/en/adlab-03-pitfalls/)
+4. [A file server, and a second DC without an ISO](/blog/en/adlab-04-fileserver-dc2/)
+5. [Moving FSMO roles, and how long DNS takes to follow](/blog/en/adlab-05-fsmo/)
+6. [The OUs were there, but nothing was linked — Group Policy](/blog/en/adlab-06-group-policy/)
+7. [You only know it's redundant when you turn it off — DHCP failover](/blog/en/adlab-07-dhcp-failover/)
+8. [Moving the whole lab to another PC](/blog/en/adlab-08-migration/)

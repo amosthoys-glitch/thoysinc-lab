@@ -3,6 +3,7 @@ title: 'AD 홈랩 ④ 파일서버와, ISO 없이 만든 두 번째 DC'
 description: '이름만 파일서버였던 FS1에 AGDLP로 공유를 세우고, 설치 미디어 없이 기존 서버를 복제·sysprep 해서 두 번째 도메인 컨트롤러를 만든 기록. 설정이 엉뚱한 층에 있던 문제들까지.'
 pubDate: 'Nov 04 2026'
 lang: 'ko'
+translation: 'en/adlab-04-fileserver-dc2'
 tags: ['active-directory', 'homelab', 'file-server', 'hyper-v', 'sysprep', 'dns']
 ---
 

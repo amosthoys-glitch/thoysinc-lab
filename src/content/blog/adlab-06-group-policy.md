@@ -3,6 +3,7 @@ title: 'AD 홈랩 ⑥ OU는 있었는데 걸린 게 없었다 — 그룹 정책'
 description: '잠금 정책 0회, 사용자가 직접 찾아 들어가던 공유, 도메인 관리자에게 몰린 권한. 암호·잠금 정책, OU별 기준선, GPP 드라이브 매핑, 헬프데스크 권한 위임으로 그 공백을 메운 기록.'
 pubDate: 'Nov 06 2026'
 lang: 'ko'
+translation: 'en/adlab-06-group-policy'
 tags: ['active-directory', 'homelab', 'group-policy', 'delegation', 'powershell']
 ---
 

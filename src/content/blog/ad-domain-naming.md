@@ -3,6 +3,7 @@ title: '홈랩 AD 도메인 이름: .local 을 고르면 나중에 어디서 막
 description: 'thoyslab.local 로 시작했다가 알게 된 것들 — mDNS 충돌, 공인 인증서 발급 불가, 그리고 도메인 이름을 바꾸는 비용.'
 pubDate: 'Aug 22 2026'
 lang: 'ko'
+translation: 'en/ad-domain-naming'
 tags: ['active-directory', 'dns', 'homelab']
 ---
 

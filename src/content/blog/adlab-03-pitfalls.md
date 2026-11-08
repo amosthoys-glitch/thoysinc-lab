@@ -3,6 +3,7 @@ title: 'AD 홈랩 ③ 막혔던 일곱 지점 — 문서대로 하면 안 나오
 description: 'BOM 없는 한글 .ps1, 같은 OU의 동명이인, DNS 부정 캐시, 창 뒤에 숨은 자격 증명 팝업, 실행 정책, 가입과 이름 변경의 충돌, 그리고 RDP로는 안 되는 첫 로그인.'
 pubDate: 'Nov 03 2026'
 lang: 'ko'
+translation: 'en/adlab-03-pitfalls'
 tags: ['active-directory', 'homelab', 'powershell', 'troubleshooting', 'dns']
 ---
 

@@ -3,6 +3,7 @@ title: 'AD 홈랩 ② 구축 — DC 승격부터 도메인 계정 로그인까�
 description: '가상 스위치와 NAT, VM 3대, DC1 승격, OU와 사용자 100명, DHCP, 서버·클라이언트 도메인 가입까지 스크립트 9개로 4시간. 그리고 "됐다"를 VM 밖에서 확인한 방법.'
 pubDate: 'Nov 02 2026'
 lang: 'ko'
+translation: 'en/adlab-02-build'
 tags: ['active-directory', 'homelab', 'hyper-v', 'powershell', 'dns', 'dhcp']
 ---
 

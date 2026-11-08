@@ -3,6 +3,7 @@ title: 'AD 홈랩 ⑦ 꺼봐야 이중화인지 안다 — DHCP 페일오버'
 description: 'DC1 한 대에만 있던 DHCP를 DC2와 핫 스탠바이로 묶고, 주 서버를 실제로 정지시켜 클라이언트가 같은 주소를 대기 서버에서 받는지 확인한 기록. 통신 두절과 전체 인계가 왜 다른 상태인지까지.'
 pubDate: 'Nov 07 2026'
 lang: 'ko'
+translation: 'en/adlab-07-dhcp-failover'
 tags: ['active-directory', 'homelab', 'dhcp', 'high-availability', 'powershell']
 ---
 

@@ -3,6 +3,7 @@ title: 'AD 홈랩 ⑧ 랩을 통째로 다른 PC로 옮기기 — 명령은 성�
 description: 'DC·파일서버·클라이언트 VM 3대(84.3GB)를 다른 노트북으로 내보내고 가져온 기록. 호환성 문제는 0건이었지만 vTPM 봉인, 실행 정책, 오진 하나, 그리고 USB의 ISO를 물고 있던 VM까지 네 곳에서 막혔습니다.'
 pubDate: 'Nov 08 2026'
 lang: 'ko'
+translation: 'en/adlab-08-migration'
 tags: ['active-directory', 'homelab', 'hyper-v', 'migration', 'vtpm']
 ---
 

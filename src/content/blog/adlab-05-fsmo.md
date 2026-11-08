@@ -3,6 +3,7 @@ title: 'AD 홈랩 ⑤ FSMO 이전과, DNS가 따라오는 시간'
 description: '다섯 역할을 DC2로 옮겼다 되돌린 기록. 역할 이전은 한 줄로 끝났지만 클라이언트가 그걸 알아채기까지 캐시·레코드 공백·AD 복제·영역 폴링의 네 겹 지연이 있었습니다. 이전과 탈취의 차이까지.'
 pubDate: 'Nov 05 2026'
 lang: 'ko'
+translation: 'en/adlab-05-fsmo'
 tags: ['active-directory', 'homelab', 'fsmo', 'dns', 'replication']
 ---
 
