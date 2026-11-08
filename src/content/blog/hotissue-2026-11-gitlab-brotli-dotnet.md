@@ -3,6 +3,7 @@ title: '[이번 주 보안] 11월 10일 전에 끝낼 것 — GitLab 원격 코�
 description: '로그인 없이 GitLab 서버를 장악하는 CI/CD 취약점과, .NET을 포함한 수많은 프로그램이 쓰는 Brotli 압축 해제 취약점이 모두 실제 공격에 쓰이고 있습니다. 같은 날 .NET 8과 9의 지원도 끝납니다. 확인 명령과 수정 버전을 정리했습니다.'
 pubDate: 'Nov 02 2026'
 lang: 'ko'
+translation: 'en/hotissue-2026-11-gitlab-brotli-dotnet'
 tags: ['security', 'hot-issue', 'gitlab', 'dotnet', 'brotli', 'patching']
 ---
 

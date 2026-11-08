@@ -13,7 +13,10 @@ import { LANGS } from '../consts';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage, lang, tags, draft } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, lang, tags, draft, translation } = Astro.props;
+// 다른 언어판이 있으면 hreflang 과 언어 전환 링크를 붙입니다.
+const otherLang = lang === 'ko' ? 'en' : 'ko';
+const otherHref = translation ? url('blog/' + translation + '/') : undefined;
 ---
 
 <html lang={LANGS[lang].htmlLang}>
@@ -27,6 +30,14 @@ const { title, description, pubDate, updatedDate, heroImage, lang, tags, draft }
 			publishedTime={pubDate}
 			modifiedTime={updatedDate}
 		/>
+		{
+			otherHref && (
+				<>
+					<link rel="alternate" hreflang={LANGS[lang].htmlLang} href={new URL(Astro.url.pathname, Astro.site)} />
+					<link rel="alternate" hreflang={LANGS[otherLang].htmlLang} href={new URL(otherHref, Astro.site)} />
+				</>
+			)
+		}
 		<style>
 			main {
 				width: calc(100% - 2em);
@@ -60,6 +71,10 @@ const { title, description, pubDate, updatedDate, heroImage, lang, tags, draft }
 			.title :global(.meta) {
 				justify-content: flex-start;
 			}
+			.lang-switch {
+				margin: 0.6em 0 0;
+				font-size: 0.95em;
+			}
 			.post-footer {
 				margin-top: 3em;
 				padding-top: 1.5em;
@@ -87,6 +102,15 @@ const { title, description, pubDate, updatedDate, heroImage, lang, tags, draft }
 							tags={tags}
 							draft={draft}
 						/>
+						{
+							otherHref && (
+								<p class="lang-switch">
+									<a href={otherHref} hreflang={LANGS[otherLang].htmlLang}>
+										{lang === 'ko' ? 'Read in English →' : '한국어로 읽기 →'}
+									</a>
+								</p>
+							)
+						}
 					</div>
 					<slot />
 					<AdSlot />

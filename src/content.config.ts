@@ -16,6 +16,8 @@ const blog = defineCollection({
 			heroImage: z.optional(image()),
 			// 글 언어. 블로그 목록의 KO/EN 필터와 <html lang> 에 쓰입니다.
 			lang: z.enum(['ko', 'en']).default('ko'),
+			// 다른 언어판의 글 id (예: 'en/adlab-01-design' 또는 'adlab-01-design'). 있으면 hreflang 과 언어 전환 링크가 붙습니다.
+			translation: z.string().optional(),
 			// 소문자 kebab-case 로 통일하세요. 태그 페이지가 자동 생성됩니다.
 			tags: z.array(z.string()).default([]),
 			// true 면 프로덕션 빌드에서 제외됩니다 (dev 서버에서는 보임).

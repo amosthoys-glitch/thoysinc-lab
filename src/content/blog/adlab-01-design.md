@@ -3,6 +3,7 @@ title: 'AD 홈랩 ① 설계 — 노트북 한 대에 도메인 하나'
 description: 'Windows 11 노트북 한 대에 Hyper-V로 DC·파일서버·클라이언트를 세우기 전에 종이에 먼저 정한 것들. 내부 스위치와 NAT, IP 규칙, 스토리지 배치, 그리고 메모리 배분.'
 pubDate: 'Nov 01 2026'
 lang: 'ko'
+translation: 'en/adlab-01-design'
 tags: ['active-directory', 'homelab', 'hyper-v', 'networking']
 ---
 

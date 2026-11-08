@@ -3,6 +3,7 @@ title: '[이번 주 보안] VPN 장비부터 보세요 — Ivanti Connect Secure
 description: '10월 마지막 주 CISA가 "실제 공격 중" 목록에 올린 VPN 장비 취약점 두 건. 무엇이 문제인지, 우리 회사가 해당되는지 확인하는 법, 패치 뒤 AD 쪽에서 할 일까지 정리했습니다.'
 pubDate: 'Nov 01 2026'
 lang: 'ko'
+translation: 'en/hotissue-2026-11-vpn-ivanti-cisco'
 tags: ['security', 'hot-issue', 'vpn', 'ivanti', 'cisco', 'active-directory']
 ---
 
