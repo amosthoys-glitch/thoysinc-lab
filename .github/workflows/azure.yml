@@ -25,6 +25,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0 # IndexNow 단계가 이번 푸시에서 바뀐 글을 찾을 수 있게
       - uses: actions/setup-node@v5
         with:
           node-version: 22
@@ -41,10 +43,16 @@ jobs:
           skip_app_build: true
           output_location: ""
 
-      # 새 글이 배포되면 Bing·Naver 등에 바로 알립니다(IndexNow). 실패해도 배포는 그대로 성공 처리합니다.
+      # 이번 푸시에서 바뀐 글만 Bing·Naver 등에 알립니다(IndexNow). 실패해도 배포는 그대로 성공 처리합니다.
       - name: IndexNow 제출
         if: github.event_name == 'push'
         continue-on-error: true
+        env:
+          BEFORE: ${{ github.event.before }}
         run: |
           sleep 60
-          node scripts/indexnow.mjs blog.thoysinc.com
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then BEFORE=HEAD~1; fi
+          URLS=$(git diff --name-only --diff-filter=AM "$BEFORE" HEAD -- src/content/blog \
+            | sed -n 's#^src/content/blog/\(.*\)\.mdx\{0,1\}$#https://blog.thoysinc.com/blog/\1/#p')
+          echo "바뀐 글: $URLS"
+          if [ -n "$URLS" ]; then node scripts/indexnow.mjs blog.thoysinc.com https://blog.thoysinc.com/ $URLS; fi
