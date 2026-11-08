@@ -61,6 +61,19 @@ const pageTitle = title === SITE_TITLE ? title : `${title} · ${SITE_TITLE}`;
 	)
 }
 {import.meta.env.PUBLIC_NOINDEX === "true" && <meta name="robots" content="noindex, nofollow" />}
+<!-- Google Analytics: thoysinc.com 주소에서만 켭니다 (로컬 미리보기·GitHub Pages 사본 제외). -->
+<script is:inline>
+	if (/(^|.)thoysinc.com$/.test(location.hostname)) {
+		var ga = document.createElement('script');
+		ga.async = true;
+		ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-QT3J6F0WE0';
+		document.head.appendChild(ga);
+		window.dataLayer = window.dataLayer || [];
+		window.gtag = function () { window.dataLayer.push(arguments); };
+		window.gtag('js', new Date());
+		window.gtag('config', 'G-QT3J6F0WE0');
+	}
+</script>
 
 
 <!-- Canonical URL -->

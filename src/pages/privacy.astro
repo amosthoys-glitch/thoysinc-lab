@@ -7,7 +7,7 @@ import Header from '../components/Header.astro';
 import { SOCIAL } from '../consts';
 
 // 내용이 바뀌면 이 날짜를 함께 고칩니다.
-const UPDATED = '2026년 11월 2일';
+const UPDATED = '2026년 11월 7일';
 const email = SOCIAL.email.replace(/^mailto:/, '');
 ---
 <!doctype html>
@@ -48,6 +48,13 @@ const email = SOCIAL.email.replace(/^mailto:/, '');
 			<p>
 				이 블로그는 Microsoft Azure Static Web Apps에서 운영됩니다. 다른 웹사이트와 마찬가지로 호스팅 서버는 접속 시 IP 주소,
 				브라우저 종류, 요청한 페이지 같은 기술 정보를 보안과 운영 목적으로 기록할 수 있습니다.
+			</p>
+
+			<p>
+				어떤 글이 읽히는지 알기 위해 Google Analytics로 방문 통계를 수집합니다. 본 페이지, 머문 시간, 들어온 경로, 대략적인 지역,
+				기기 종류 같은 정보가 쿠키를 통해 기록되며, 이름이나 연락처 같은 개인 식별 정보는 담기지 않습니다. 수집을 원하지 않으면
+				<a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics 차단 브라우저 부가기능</a>을 쓰거나 브라우저에서
+				쿠키를 거부할 수 있습니다.
 			</p>
 
 			<h2>3. 쿠키와 광고</h2>
