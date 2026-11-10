@@ -3,6 +3,7 @@ title: '매장 하나 여는 데 한 달, IT는 공사팀 뒤에 섭니다'
 description: '브루클린의 슈퍼마켓 체인에서 매장을 3곳에서 15곳으로 늘리며 IT를 맡았습니다. 일정은 우리가 정하지 못했고, 우리 몫의 일은 가격이 제대로 찍히는지 확인하는 것이었습니다.'
 pubDate: 'Aug 23 2026'
 lang: 'ko'
+translation: 'en/store-opening-pos-pricing'
 tags: ['retail', 'pos', 'field-notes']
 ---
 

@@ -3,6 +3,7 @@ title: '왜 또 블로그인가'
 description: '검색 트래픽이 말라가는 시대에 기술 블로그를 시작하는 이유, 그리고 여기에 무엇을 쓰지 않을 것인가.'
 pubDate: 'Aug 22 2026'
 lang: 'ko'
+translation: 'en/hello'
 tags: ['meta']
 ---
 
