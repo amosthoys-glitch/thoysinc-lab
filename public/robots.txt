@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://blog.thoysinc.com/sitemap-index.xml
+
+#DaumWebMasterTool:97cd33451b7540e4920e5b199cb8dadf0fc35cb3e9bbd1389b0fc8053be2888c:rbSFXQUyqc9N1qm+e2U/ew==
