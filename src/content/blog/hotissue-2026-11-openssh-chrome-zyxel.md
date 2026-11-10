@@ -3,6 +3,7 @@ title: '[이번 주 보안] Alpine SSH 비밀번호 우회, 크롬 제로데이,
 description: '긴 비밀번호 하나로 Alpine 리눅스 SSH에 로그인되는 OpenSSH 취약점이 공개 몇 시간 만에 공격에 쓰였습니다. 크롬은 올해 여덟 번째 제로데이를 고쳤고, Zyxel 스위치는 패치를 우회한 공격이 이어졌습니다. 확인 명령과 수정 버전을 정리했습니다.'
 pubDate: 'Nov 10 2026'
 lang: 'ko'
+translation: 'en/hotissue-2026-11-openssh-chrome-zyxel'
 tags: ['security', 'hot-issue', 'openssh', 'linux', 'chrome', 'zyxel', 'patching']
 ---
 
