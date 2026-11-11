@@ -15,7 +15,19 @@ const recent = (await getPosts()).slice(0, 5);
 <!doctype html>
 <html lang="ko">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead
+			title={SITE_TITLE}
+			description={SITE_DESCRIPTION}
+			jsonLd={{
+				'@context': 'https://schema.org',
+				'@type': 'WebSite',
+				name: SITE_TITLE,
+				url: Astro.site?.toString(),
+				description: SITE_DESCRIPTION,
+				inLanguage: ['ko', 'en'],
+				publisher: { '@type': 'Organization', name: 'Thoys Inc', url: 'https://www.thoysinc.com/' },
+			}}
+		/>
 		<style>
 			main {
 				width: 800px;

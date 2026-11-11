@@ -9,7 +9,8 @@ import Header from '../components/Header.astro';
 import { url } from '../lib/urls';
 import AdSlot from '../components/AdSlot.astro';
 import PostMeta from '../components/PostMeta.astro';
-import { LANGS } from '../consts';
+import { AUTHOR, LANGS, SITE_TITLE, SOCIAL } from '../consts';
+import OgDefault from '../assets/og-default.png';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -17,6 +18,28 @@ const { title, description, pubDate, updatedDate, heroImage, lang, tags, draft, 
 // 다른 언어판이 있으면 hreflang 과 언어 전환 링크를 붙입니다.
 const otherLang = lang === 'ko' ? 'en' : 'ko';
 const otherHref = translation ? url('blog/' + translation + '/') : undefined;
+const pageUrl = new URL(Astro.url.pathname, Astro.site).toString();
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'BlogPosting',
+	headline: title,
+	description,
+	datePublished: pubDate.toISOString(),
+	dateModified: (updatedDate ?? pubDate).toISOString(),
+	inLanguage: LANGS[lang].htmlLang,
+	url: pageUrl,
+	mainEntityOfPage: pageUrl,
+	image: [new URL((heroImage ?? OgDefault).src, Astro.site).toString()],
+	keywords: tags?.join(', ') || undefined,
+	author: {
+		'@type': 'Person',
+		name: AUTHOR,
+		url: new URL(url('about/'), Astro.site).toString(),
+		sameAs: [SOCIAL.linkedin, SOCIAL.github],
+	},
+	publisher: { '@type': 'Organization', name: 'Thoys Inc', url: 'https://www.thoysinc.com/' },
+	isPartOf: { '@type': 'Blog', name: SITE_TITLE, url: Astro.site?.toString() },
+};
 ---
 
 <html lang={LANGS[lang].htmlLang}>
@@ -29,6 +52,7 @@ const otherHref = translation ? url('blog/' + translation + '/') : undefined;
 			type="article"
 			publishedTime={pubDate}
 			modifiedTime={updatedDate}
+			jsonLd={jsonLd}
 		/>
 		{
 			otherHref && (
