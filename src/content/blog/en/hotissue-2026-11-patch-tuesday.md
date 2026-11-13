@@ -120,6 +120,10 @@ On the client side: Windows 11 24H2, 25H2 and 26H2 get **KB5132061**, 23H2 gets 
 3. **Exchange SE** — KB5133453 if you run it on-premises
 4. Everything else on your normal schedule
 
+## A note from me
+
+I do not install patches the day they come out. I watch for a few days, then install them.
+
 ## Sources
 
 - Microsoft Security Response Center, November 2026 security update data (CVRF, released Nov 10, revised Nov 11): https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Nov

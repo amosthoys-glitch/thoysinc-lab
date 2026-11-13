@@ -120,6 +120,10 @@ PC 쪽은 Windows 11 24H2·25H2·26H2가 **KB5132061**, 23H2가 **KB5131087**, W
 3. **Exchange SE** — 온프레미스라면 KB5133453
 4. 나머지 서버와 PC는 평소 일정대로
 
+## 운영자 한마디
+
+저는 패치가 나오면 바로 올리지 않고, 며칠 지켜본 뒤에 설치해요.
+
 ## 출처
 
 - Microsoft Security Response Center, 2026년 11월 보안 업데이트 데이터(CVRF, 11월 10일 공개·11일 갱신): https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Nov
