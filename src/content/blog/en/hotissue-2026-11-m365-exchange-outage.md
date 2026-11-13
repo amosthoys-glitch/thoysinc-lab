@@ -14,7 +14,7 @@ tags: ['microsoft-365', 'exchange-online', 'outage', 'hot-issue', 'outlook', 'te
 
 ## November 13 update — still "Recovering"
 
-- **Status:** As of 12:30 UTC on November 13, reports had the incident as "Recovering," with no full resolution announced. The incident IDs are **EX1550543** for Exchange Online and **MO1550821** for the wider Microsoft 365 impact. It began at 16:17 UTC on November 12
+- **Status:** Microsoft's official status page still shows **Service degradation** as of its 16:07 UTC update on November 13. No full resolution has been announced. The incident IDs are **EX1550543** for Exchange Online and **MO1550821** for the wider Microsoft 365 impact. It began at 16:17 UTC on November 12
 - **The explanation changed:** Microsoft said a **process that establishes secure connections became overwhelmed** on affected servers, so they stopped handling requests. It also said it was **rolling back a recent network configuration change** whose timing matches the start of the incident. It has not confirmed that change as the cause
 - **Why recovery was slow:** Servers that were brought back reportedly stopped responding again once traffic returned
 - **Attack or not:** Microsoft said there is no sign of malicious activity or a cyberattack
