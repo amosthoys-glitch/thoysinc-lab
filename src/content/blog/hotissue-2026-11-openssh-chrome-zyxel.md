@@ -88,6 +88,10 @@ rc-service sshd restart
 - [ ] IBM Aspera Faspex: 5.0.19 PL1
 - [ ] 오늘(11월 10일)은 11월 Patch Tuesday — 내용은 내일 따로 정리합니다
 
+## 운영자 한마디
+
+업무를 이어 가려고 Chrome으로 작업하다 보면 안 끄고 쓰는 게 보통이에요. 며칠, 길게는 몇 달씩 켜 두는 사람도 있어요. 집에서 쓰는 스위치는 주로 TP-Link이고, 때에 따라 Netgear도 써요. 문제가 생기면 네트워크 담당자에게 문의해요. 리눅스 서버는 제 담당이 아니라, 이 부분은 저도 배우는 중이에요.
+
 ## 출처
 
 - [CISA, Adds Four Known Exploited Vulnerabilities to Catalog (2026-11-09)](https://www.cisa.gov/news-events/alerts/2026/11/09/cisa-adds-four-known-exploited-vulnerabilities-catalog)

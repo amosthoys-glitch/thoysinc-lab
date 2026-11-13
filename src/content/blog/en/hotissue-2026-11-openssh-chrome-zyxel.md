@@ -88,6 +88,10 @@ Even after an automatic update arrives, Chrome **only applies it on restart**. C
 - [ ] IBM Aspera Faspex: 5.0.19 PL1
 - [ ] Today (November 10) is November's Patch Tuesday — a separate write-up follows tomorrow
 
+## A note from me
+
+When you work in Chrome and want to pick up where you left off, you usually just leave it open. Some people keep it running for days, even months. At home I mostly use TP-Link switches, and sometimes Netgear. If something goes wrong, I ask the network person. Linux servers are not my area, so I am still learning that part myself.
+
 ## Sources
 
 - [CISA, Adds Four Known Exploited Vulnerabilities to Catalog (2026-11-09)](https://www.cisa.gov/news-events/alerts/2026/11/09/cisa-adds-four-known-exploited-vulnerabilities-catalog)
