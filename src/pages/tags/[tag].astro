@@ -23,7 +23,7 @@ const { tag, posts } = Astro.props;
 <!doctype html>
 <html lang="ko">
 	<head>
-		<BaseHead title={`#${tag}`} description={`${tag} 태그가 달린 글 ${posts.length}개.`} />
+		<BaseHead ads={false} title={`#${tag}`} description={`${tag} 태그가 달린 글 ${posts.length}개.`} />
 		<style>
 			main {
 				width: 800px;

@@ -19,6 +19,9 @@ interface Props {
 	modifiedTime?: Date;
 	/** 검색엔진용 구조화 데이터(JSON-LD). 화면에 보이는 내용과 같아야 합니다. */
 	jsonLd?: Record<string, unknown>;
+	/** 광고 코드를 넣을지. 태그 목록처럼 글 없이 링크만 있는 화면은 끕니다
+	 *  (애드센스 정책: 안내·탐색용 화면에는 광고 금지). */
+	ads?: boolean;
 }
 
 // 미리보기 사본(github.io)은 운영 주소를 원본으로 가리켜 중복 콘텐츠로 잡히지 않게 합니다.
@@ -36,13 +39,24 @@ const {
 	publishedTime,
 	modifiedTime,
 	jsonLd,
+	ads = true,
 } = Astro.props;
+const showAds = adsEnabled && ads;
 
 const pageTitle = title === SITE_TITLE ? title : `${title} · ${SITE_TITLE}`;
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
+{/* Azure 자동 주소(*.azurestaticapps.net)로 들어오면 운영 주소로 보냅니다.
+     같은 글이 두 주소에 뜨면 애드센스가 '복제 콘텐츠'로 봅니다 (2026-11-12 거절). */}
+<script is:inline>
+	(function () {
+		if (/\.azurestaticapps\.net$/.test(location.hostname)) {
+			location.replace('https://blog.thoysinc.com' + location.pathname + location.search + location.hash);
+		}
+	})();
+</script>
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href={url("favicon.svg")} />
 <link rel="icon" href={url("favicon.ico")} />
@@ -59,7 +73,7 @@ const pageTitle = title === SITE_TITLE ? title : `${title} · ${SITE_TITLE}`;
 	adsEnabled && <meta name="google-adsense-account" content={CLIENT_ID} />
 }
 {
-	adsEnabled && (
+	showAds && (
 		<script
 			async
 			src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${CLIENT_ID}`}
