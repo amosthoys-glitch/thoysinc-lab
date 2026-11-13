@@ -11,6 +11,16 @@ tags: ['microsoft-365', 'exchange-online', 'outage', 'hot-issue', 'outlook', 'te
 >
 > For: administrators of Microsoft 365 Business and Enterprise tenants
 
+## November 13 update — still "Recovering"
+
+- **Status:** As of 12:30 UTC on November 13, reports had the incident as "Recovering," with no full resolution announced. The incident IDs are **EX1550543** for Exchange Online and **MO1550821** for the wider Microsoft 365 impact. It began at 16:17 UTC on November 12
+- **The explanation changed:** Microsoft said a **process that establishes secure connections became overwhelmed** on affected servers, so they stopped handling requests. It also said it was **rolling back a recent network configuration change** whose timing matches the start of the incident. It has not confirmed that change as the cause
+- **Why recovery was slow:** Servers that were brought back reportedly stopped responding again once traffic returned
+- **Attack or not:** Microsoft said there is no sign of malicious activity or a cyberattack
+- **Post-incident report:** Microsoft said it will publish a Post-Incident Report with the root cause and prevention steps once mitigation is complete. It is not out yet
+
+Check EX1550543 under **Service health** in the admin center for the current status.
+
 ## What happened
 
 - Starting **shortly before 1 p.m. ET** on November 12, reports that Outlook was down poured in. CNBC said Downdetector logged **about 130,000** reports
@@ -45,6 +55,8 @@ When there is an outage, the first thing I do is check the connection.
 
 ## Sources
 
+- [SecurityWeek, Microsoft 365 Outage Disrupts Outlook, Exchange Online and Teams](https://www.securityweek.com/microsoft-365-outage-disrupts-outlook-exchange-online-and-teams/)
+- [GeekWire, Microsoft 365 starts to recover after a day of global email turmoil](https://www.geekwire.com/2026/a-huge-pain-in-the-ass-microsoft-365-starts-to-recover-after-a-daylong-global-email-blackout/)
 - [Microsoft service health status (status.cloud.microsoft, updated 2026-11-12 23:06 UTC)](https://status.cloud.microsoft/)
 - [CNBC, Widespread Microsoft outage takes down Outlook and other 365 services (2026-11-12)](https://www.cnbc.com/2026/11/12/microsoft-outage-outlook-aws-google.html)
 - [ABC News, Outlook outage: Microsoft reports 'issues' with Teams and email (2026-11-12)](https://abcnews.com/US/outlook-down-microsoft-outage-reported-mail/story?id=138088203)

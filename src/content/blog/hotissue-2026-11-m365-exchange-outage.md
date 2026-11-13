@@ -11,6 +11,16 @@ tags: ['microsoft-365', 'exchange-online', 'outage', 'hot-issue', 'outlook', 'te
 >
 > 대상: Microsoft 365 Business·Enterprise를 쓰는 회사의 관리자
 
+## 11월 13일 갱신 — 아직 "복구 중"
+
+- **상태:** 11월 13일 12:30 UTC 기준으로 "복구 중(Recovering)"이고, 완전 해결 발표는 아직 없다고 보도됐습니다. 사건 번호는 Exchange Online이 **EX1550543**, Microsoft 365 전체 영향이 **MO1550821** 입니다. 시작 시각은 11월 12일 16:17 UTC입니다
+- **원인 설명이 바뀌었습니다:** Microsoft는 영향받은 서버에서 **보안 연결을 맺는 프로세스가 과부하**에 걸려 요청을 처리하지 못했다고 설명했습니다. 장애 시작과 시점이 맞는 **최근 네트워크 구성 변경을 되돌리는 중**이라고도 했습니다. 다만 그 변경이 원인이라고 확정하지는 않았습니다
+- **복구가 더뎠던 이유:** 서버를 다시 올려도 트래픽이 돌아오면 다시 응답하지 않는 일이 반복됐다고 합니다
+- **공격 여부:** Microsoft는 악의적 활동이나 사이버 공격의 징후는 없다고 밝혔습니다
+- **사후 보고서:** 조치가 끝나면 근본 원인과 재발 방지책을 담은 Post-Incident Report를 내겠다고 했습니다. 아직 나오지 않았습니다
+
+지금 상태는 관리 센터 **서비스 상태**에서 EX1550543을 직접 확인하세요.
+
 ## 무슨 일인가
 
 - 11월 12일 미 동부 시간 **오후 1시 조금 전**(애리조나 오전 11시 무렵)부터 Outlook이 안 된다는 신고가 쏟아졌습니다. CNBC는 Downdetector 신고가 **약 13만 건**이었다고 전했습니다
@@ -45,6 +55,8 @@ tags: ['microsoft-365', 'exchange-online', 'outage', 'hot-issue', 'outlook', 'te
 
 ## 출처
 
+- [SecurityWeek, Microsoft 365 Outage Disrupts Outlook, Exchange Online and Teams](https://www.securityweek.com/microsoft-365-outage-disrupts-outlook-exchange-online-and-teams/)
+- [GeekWire, Microsoft 365 starts to recover after a day of global email turmoil](https://www.geekwire.com/2026/a-huge-pain-in-the-ass-microsoft-365-starts-to-recover-after-a-daylong-global-email-blackout/)
 - [Microsoft service health status (status.cloud.microsoft, 2026-11-12 23:06 UTC 갱신)](https://status.cloud.microsoft/)
 - [CNBC, Widespread Microsoft outage takes down Outlook and other 365 services (2026-11-12)](https://www.cnbc.com/2026/11/12/microsoft-outage-outlook-aws-google.html)
 - [ABC News, Outlook outage: Microsoft reports 'issues' with Teams and email (2026-11-12)](https://abcnews.com/US/outlook-down-microsoft-outage-reported-mail/story?id=138088203)
