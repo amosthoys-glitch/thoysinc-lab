@@ -39,6 +39,10 @@ tags: ['microsoft-365', 'exchange-online', 'outage', 'hot-issue', 'outlook', 'te
 
 I'll update this post when the outage is fully resolved or Microsoft shares more about the cause.
 
+## A note from me
+
+When there is an outage, the first thing I do is check the connection.
+
 ## Sources
 
 - [Microsoft service health status (status.cloud.microsoft, updated 2026-11-12 23:06 UTC)](https://status.cloud.microsoft/)

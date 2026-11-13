@@ -81,6 +81,10 @@ Get-ADComputer -SearchBase 'OU=Workstations,DC=corp,DC=example,DC=com' -Filter *
 - [ ] Cisco ASA/FTD: 보조 인증 쓰는 터널 그룹이 있으면 수정 버전으로
 - [ ] Windows: 10월 누적 업데이트 미적용 PC 정리
 
+## 운영자 한마디
+
+저는 VPN 장비 때문에 고생한 적은 아직 없어요.
+
 ## 출처
 
 - [CISA, Known Exploited Vulnerabilities Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)

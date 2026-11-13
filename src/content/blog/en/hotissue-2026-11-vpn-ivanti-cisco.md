@@ -81,6 +81,10 @@ Microsoft's October security update (October 13) was the largest ever, with more
 - [ ] Cisco ASA/FTD: if any tunnel group uses secondary authentication, move to a fixed release
 - [ ] Windows: clean up PCs still missing the October cumulative update
 
+## A note from me
+
+I have not had trouble with a VPN appliance so far.
+
 ## Sources
 
 - [CISA, Known Exploited Vulnerabilities Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)

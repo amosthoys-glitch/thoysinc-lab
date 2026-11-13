@@ -79,6 +79,8 @@ If a program **bundles its own copy of Brotli**, updating the system library wil
 
 On the same day **.NET 8 (LTS) and .NET 9 (STS) both go out of support.** After that, flaws like this Brotli one will not get patches. If you have in-house apps on .NET 8 or 9, apply this emergency patch first, then **plan the move to .NET 10 (LTS)** right away. .NET 10 is supported until November 2028.
 
+Put end-of-support dates on a calendar so they do not sneak up on you. List the products you run once, and set a reminder six months before each date. Check the dates on each product's official support policy page.
+
 ## This week's checklist
 
 - [ ] Self-managed GitLab: 19.4.2 / 19.3.5 / 19.2.8 or later, rotate CI/CD variables and runner tokens
@@ -86,6 +88,10 @@ On the same day **.NET 8 (LTS) and .NET 9 (STS) both go out of support.** After 
 - [ ] Linux servers: update the Brotli package, find programs that bundle their own Brotli
 - [ ] List your .NET 8 and 9 apps and schedule the move to .NET 10
 - [ ] Block out time for Patch Tuesday on November 10
+
+## A note from me
+
+Honestly, I had never thought about how to keep track of end-of-support dates.
 
 ## Sources
 

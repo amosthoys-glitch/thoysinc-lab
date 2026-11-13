@@ -85,6 +85,10 @@ Until you upgrade, the listed workarounds are `force_auth_localhost=true`, strip
 - [ ] Cisco BroadWorks: RI.2026.07
 - [ ] Openwave Webtop Media Transcoder: latest Media Server 2.0
 
+## A note from me
+
+We have an outside company for this, and they handle our IT infrastructure, including equipment like this.
+
 ## Sources
 
 - [CISA, Adds Four Known Exploited Vulnerabilities to Catalog (2026-11-09)](https://www.cisa.gov/news-events/alerts/2026/11/09/cisa-adds-four-known-exploited-vulnerabilities-catalog)

@@ -85,6 +85,10 @@ CISA는 11월 9일 네 건, 10일 여섯 건을 **알려진 악용 취약점(KEV
 - [ ] Cisco BroadWorks: RI.2026.07
 - [ ] Openwave Webtop Media Transcoder: Media Server 2.0 최신
 
+## 운영자 한마디
+
+저희는 담당 회사가 따로 있어서, 이런 장비는 그 회사에서 IT 인프라를 맡아요.
+
 ## 출처
 
 - [CISA, Adds Four Known Exploited Vulnerabilities to Catalog (2026-11-09)](https://www.cisa.gov/news-events/alerts/2026/11/09/cisa-adds-four-known-exploited-vulnerabilities-catalog)

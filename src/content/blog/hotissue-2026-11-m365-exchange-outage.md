@@ -39,6 +39,10 @@ tags: ['microsoft-365', 'exchange-online', 'outage', 'hot-issue', 'outlook', 'te
 
 장애가 완전히 풀리거나 Microsoft가 원인을 더 밝히면 이 글을 갱신하겠습니다.
 
+## 운영자 한마디
+
+장애가 나면 저는 일단 연결 상태부터 점검해요.
+
 ## 출처
 
 - [Microsoft service health status (status.cloud.microsoft, 2026-11-12 23:06 UTC 갱신)](https://status.cloud.microsoft/)
