@@ -2,6 +2,7 @@
 title: '[Outage] Microsoft 365 Exchange Online Outage — What Admins Should Check Now'
 description: 'On the afternoon of November 12 (U.S. Eastern), Microsoft 365 went down centered on Exchange Online, taking Outlook and Teams with it. What Microsoft says caused it, where recovery stands, where to check status when the admin center won''t load, and what to verify afterward.'
 pubDate: 'Nov 12 2026'
+updatedDate: 'Nov 13 2026'
 lang: 'en'
 translation: 'hotissue-2026-11-m365-exchange-outage'
 tags: ['microsoft-365', 'exchange-online', 'outage', 'hot-issue', 'outlook', 'teams']

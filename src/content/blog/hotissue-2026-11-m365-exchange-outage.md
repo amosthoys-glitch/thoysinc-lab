@@ -2,6 +2,7 @@
 title: '[장애 속보] Microsoft 365 Exchange Online 장애 — 관리자가 지금 확인할 것'
 description: '11월 12일 오후(미 동부 기준) Exchange Online을 중심으로 Outlook·Teams 등 Microsoft 365에 장애가 났습니다. Microsoft가 밝힌 원인과 복구 상황, 관리 센터가 안 열릴 때 상태 확인하는 곳, 복구 뒤 점검할 것을 정리했습니다.'
 pubDate: 'Nov 12 2026'
+updatedDate: 'Nov 13 2026'
 lang: 'ko'
 translation: 'en/hotissue-2026-11-m365-exchange-outage'
 tags: ['microsoft-365', 'exchange-online', 'outage', 'hot-issue', 'outlook', 'teams']
