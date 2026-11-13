@@ -19,4 +19,8 @@ export const CLIENT_ID = 'ca-pub-1192328371285794';
 /** 광고 슬롯 ID. 승인 후 애드센스에서 광고 단위를 만들면 나옵니다. */
 export const SLOT_ARTICLE_END = '';
 
-export const adsEnabled = CLIENT_ID.trim().length > 0;
+// GitHub Pages 미리보기 사본(PUBLIC_NOINDEX=true)에는 광고 코드를 내보내지 않습니다.
+// 2026-11-12 애드센스가 "복제된 콘텐츠가 있는 화면의 광고"로 거절했는데, 운영 사이트를
+// 통째로 복사한 github.io 사본에도 광고 코드가 붙어 있었기 때문입니다.
+export const adsEnabled =
+	CLIENT_ID.trim().length > 0 && import.meta.env.PUBLIC_NOINDEX !== 'true';

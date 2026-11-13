@@ -21,7 +21,11 @@ interface Props {
 	jsonLd?: Record<string, unknown>;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+// 미리보기 사본(github.io)은 운영 주소를 원본으로 가리켜 중복 콘텐츠로 잡히지 않게 합니다.
+const isPreview = import.meta.env.PUBLIC_NOINDEX === 'true';
+const canonicalURL = isPreview
+	? new URL(Astro.url.pathname.replace(new RegExp('^' + import.meta.env.BASE_URL.replace(/\/$/, '')), '') || '/', 'https://blog.thoysinc.com')
+	: new URL(Astro.url.pathname, Astro.site);
 
 const {
 	title,
